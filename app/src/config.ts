@@ -4,219 +4,515 @@ export default defineConfig({
   pages: [
     {
       slides: [
-        // Welcome slide
+        // Welcome slide with modern design
         {
-          title: 'Welcome to FX Cartel',
-          description: 'Join our exclusive trading community and take your forex trading to the next level',
+          media: {
+            type: 'emoji',
+            src: '📈',
+            size: 80,
+          },
+          title: '🚀 Welcome to FX Cartel',
+          description: 'Join our <b>exclusive trading community</b> and take your forex trading to the next level with professional signals and mentorship',
           textAlign: 'center',
-          button: 'Get Started',
+          shape: 'rounded',
+          button: 'Get Started 🎯',
         },
 
-        // User information form
+        // User information form with dropdown
         {
           extends: 'form',
+          media: {
+            type: 'emoji',
+            src: '👋',
+            size: 60,
+          },
           title: 'Tell us about yourself',
-          description: 'Please fill in your details',
+          description: 'Help us personalize your trading experience',
+          textAlign: 'center',
           form: [
             {
-              id: 'location',
-              placeholder: 'Where are you from?',
-              type: 'text',
+              id: 'country',
+              placeholder: 'Select your country',
+              type: 'select',
+              options: [
+                'South Africa 🇿🇦',
+                'United States 🇺🇸',
+                'United Kingdom 🇬🇧',
+                'Canada 🇨🇦',
+                'Australia 🇦🇺',
+                'Germany 🇩🇪',
+                'France 🇫🇷',
+                'Italy 🇮🇹',
+                'Spain 🇪🇸',
+                'Netherlands 🇳🇱',
+                'Switzerland 🇨🇭',
+                'Sweden 🇸🇪',
+                'Norway 🇳🇴',
+                'Denmark 🇩🇰',
+                'Finland 🇫🇮',
+                'Japan 🇯🇵',
+                'Singapore 🇸🇬',
+                'Hong Kong 🇭🇰',
+                'UAE 🇦🇪',
+                'Nigeria 🇳🇬',
+                'Kenya 🇰🇪',
+                'Ghana 🇬🇭',
+                'Egypt 🇪🇬',
+                'India 🇮🇳',
+                'Brazil 🇧🇷',
+                'Mexico 🇲🇽',
+                'Argentina 🇦🇷',
+                'Chile 🇨🇱',
+                'Other'
+              ],
             },
             {
               id: 'referral_source',
               placeholder: 'How did you hear about us?',
-              type: 'text',
+              type: 'select',
+              options: [
+                'Social Media (Instagram/Facebook)',
+                'YouTube',
+                'TikTok',
+                'Twitter/X',
+                'Friend Referral',
+                'Google Search',
+                'Trading Forum',
+                'Telegram Group',
+                'WhatsApp',
+                'Other'
+              ],
             },
           ],
-          button: 'Continue',
+          button: 'Continue ➡️',
         },
 
-        // Trading experience question
+        // Trading experience question with modern styling
         {
+          media: {
+            type: 'emoji',
+            src: '🤔',
+            size: 70,
+          },
           title: 'Trading Experience',
-          description: 'Do you have trading experience?',
+          description: 'Do you have any forex trading experience?',
           textAlign: 'center',
+          shape: 'rounded',
+          list: [
+            '💡 This helps us recommend the right service for you',
+            '📚 No experience? No problem - we\'ll guide you!',
+            '🎯 Experienced? We have advanced options too',
+          ],
           button: {
-            content: 'Yes, I have experience',
+            content: '✅ Yes, I have experience',
             to: '/experienced',
           },
         },
 
-        // No experience path
+        // No experience path with better design
         {
-          title: 'New to Trading?',
-          description: 'Perfect! We\'ll help you get started with the basics',
+          media: {
+            type: 'emoji',
+            src: '🌟',
+            size: 70,
+          },
+          title: 'Perfect! Let\'s Start Your Journey',
+          description: 'We\'ll help you become a successful trader from scratch',
+          textAlign: 'center',
+          shape: 'rounded',
           list: [
-            'Start with our beginner-friendly content',
-            'Learn the fundamentals first',
-            'Get mentorship to guide your journey',
+            '📖 Complete beginner-friendly training',
+            '👨🏫 Personal mentorship & guidance',
+            '📊 Free trading signals included',
+            '💰 Learn proper risk management',
+            '🎯 Build a profitable trading strategy',
           ],
           button: {
-            content: 'Start Learning',
+            content: '🚀 Start Learning Now',
             to: '/mentorship',
           },
         },
       ],
     },
 
-    // Experienced traders - service selection
+    // Experienced traders - service selection with modern design
     {
       extends: 'slide',
       path: '/experienced',
-      title: 'Choose Your Service',
-      description: 'Select the option that best fits your trading goals',
+      media: {
+        type: 'emoji',
+        src: '🎯',
+        size: 70,
+      },
+      title: 'Choose Your Trading Service',
+      description: 'Select the perfect option for your trading goals',
+      textAlign: 'center',
+      shape: 'rounded',
       list: [
         {
-          text: 'Free Signals Only',
+          media: {
+            type: 'emoji',
+            src: '📊',
+            size: 24,
+          },
+          text: '<b>Free Signals</b> - Daily forex signals with basic analysis',
         },
         {
-          text: 'Mentorship & Training (includes free signals)',
+          media: {
+            type: 'emoji',
+            src: '🎓',
+            size: 24,
+          },
+          text: '<b>Mentorship & Training</b> - Complete education + free signals',
         },
         {
-          text: 'VIP Signals',
+          media: {
+            type: 'emoji',
+            src: '💎',
+            size: 24,
+          },
+          text: '<b>VIP Signals</b> - Premium signals with 85%+ accuracy',
         },
       ],
       button: {
-        content: 'Free Signals',
+        content: '📊 Start with Free Signals',
         to: '/free-signals',
       },
     },
 
-    // Free Signals Path
+    // Free Signals Path with modern styling
     {
       extends: 'slide',
       path: '/free-signals',
-      title: 'Free Signals Setup',
-      description: 'To get free signals, you need an HFM broker account',
+      media: {
+        type: 'emoji',
+        src: '🆓',
+        size: 70,
+      },
+      title: '🎉 Free Signals Setup',
+      description: 'Get started with our free daily trading signals',
+      textAlign: 'center',
+      shape: 'rounded',
       list: [
-        'Sign up with <b>HFM Broker</b>',
-        'Use Partner ID: <b>YOUR_PARTNER_ID</b>',
-        'Minimum deposit: <b>R1,000.00</b>',
-        'Account must be funded to receive signals',
+        {
+          media: {
+            type: 'emoji',
+            src: '🏦',
+            size: 20,
+          },
+          text: 'Sign up with <b>HFM Broker</b> (our trusted partner)',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '🔑',
+            size: 20,
+          },
+          text: 'Use Partner ID: <b>YOUR_PARTNER_ID</b>',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '💰',
+            size: 20,
+          },
+          text: 'Minimum deposit: <b>R1,000.00</b>',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '✅',
+            size: 20,
+          },
+          text: 'Account must be <b>funded</b> to receive signals',
+        },
       ],
       button: {
-        content: 'Need Help Setting Up?',
+        content: '❓ Need Help Setting Up?',
         to: '/help',
       },
     },
 
-    // Help with broker setup
+    // Help with broker setup - modern design
     {
       extends: 'slide',
       path: '/help',
-      title: 'HFM Broker Setup Guide',
-      description: 'Step-by-step instructions to set up your account',
+      media: {
+        type: 'emoji',
+        src: '📋',
+        size: 70,
+      },
+      title: '📖 HFM Broker Setup Guide',
+      description: 'Follow these simple steps to set up your trading account',
+      textAlign: 'center',
+      shape: 'rounded',
       list: [
-        '1. Visit <b>HFM Broker</b> website',
-        '2. Click "Open Live Account"',
-        '3. Enter Partner ID: <b>YOUR_PARTNER_ID</b>',
-        '4. Complete registration form',
-        '5. Verify your identity',
-        '6. Make minimum deposit of <b>R1,000</b>',
-        '7. Send proof of funded account',
+        {
+          media: {
+            type: 'emoji',
+            src: '1️⃣',
+            size: 18,
+          },
+          text: 'Visit <b>HFM Broker</b> website',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '2️⃣',
+            size: 18,
+          },
+          text: 'Click "<b>Open Live Account</b>"',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '3️⃣',
+            size: 18,
+          },
+          text: 'Enter Partner ID: <b>YOUR_PARTNER_ID</b>',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '4️⃣',
+            size: 18,
+          },
+          text: 'Complete registration & verify identity',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '5️⃣',
+            size: 18,
+          },
+          text: 'Make minimum deposit of <b>R1,000</b>',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '6️⃣',
+            size: 18,
+          },
+          text: 'Send us proof of your funded account',
+        },
       ],
       button: {
-        content: 'Account Ready',
+        content: '✅ My Account is Ready',
         to: '/account-verified',
       },
     },
 
-    // Account verification complete
+    // Account verification complete with celebration
     {
       extends: 'slide',
       path: '/account-verified',
-      title: 'Account Setup Complete!',
-      description: 'Once you provide evidence of your funded trading account, you will be added to our free signals Telegram channel.',
+      media: {
+        type: 'emoji',
+        src: '🎉',
+        size: 80,
+      },
+      title: '🎊 Almost There!',
+      description: 'Just one final step to join our <b>exclusive free signals community</b>',
       textAlign: 'center',
+      shape: 'rounded',
       list: [
-        'Send screenshot of funded account',
-        'Wait for verification (24-48 hours)',
-        'Get added to free signals channel',
-        'Start receiving daily signals',
+        {
+          media: {
+            type: 'emoji',
+            src: '📸',
+            size: 20,
+          },
+          text: 'Send <b>screenshot</b> of your funded account',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '⏰',
+            size: 20,
+          },
+          text: 'Wait for verification (<b>24-48 hours</b>)',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '📱',
+            size: 20,
+          },
+          text: 'Get added to our <b>free signals channel</b>',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '💎',
+            size: 20,
+          },
+          text: 'Start receiving <b>daily premium signals</b>',
+        },
       ],
-      button: 'Submit Account Proof',
+      button: '📤 Submit Account Proof',
     },
 
-    // Mentorship package
+    // Mentorship package with modern design
     {
       extends: 'paywall',
       path: '/mentorship',
-      title: 'Mentorship & Training',
-      description: 'Complete trading education with personal guidance',
+      media: {
+        type: 'emoji',
+        src: '🎓',
+        size: 70,
+      },
+      title: '🚀 Mentorship & Training',
+      description: 'Transform into a <b>professional trader</b> with our complete education program',
+      shape: 'rounded',
       list: [
-        'One-on-one mentorship sessions',
-        'Complete trading course',
-        'Free signals included',
-        'Risk management training',
-        'Live trading sessions',
+        {
+          media: {
+            type: 'emoji',
+            src: '👨🏫',
+            size: 20,
+          },
+          text: '<b>One-on-one mentorship</b> sessions with pro traders',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '📚',
+            size: 20,
+          },
+          text: '<b>Complete trading course</b> (beginner to advanced)',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '📊',
+            size: 20,
+          },
+          text: '<b>Free premium signals</b> included daily',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '🛡️',
+            size: 20,
+          },
+          text: '<b>Risk management</b> & psychology training',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '📺',
+            size: 20,
+          },
+          text: '<b>Live trading sessions</b> & market analysis',
+        },
       ],
       products: [
         {
           id: 'mentorship_monthly',
-          title: 'Monthly Mentorship',
+          title: '📅 Monthly Mentorship',
           description: 'R2,500/month',
           discount: '',
           price: 2500,
         },
         {
           id: 'mentorship_quarterly',
-          title: 'Quarterly Package',
+          title: '💎 Quarterly Package',
           description: 'R6,000 (Save R1,500)',
-          discount: 'Best Value',
+          discount: '🔥 Best Value',
           price: 6000,
         },
       ],
-      mainButtonText: 'Start Mentorship - R{price}',
+      mainButtonText: '🚀 Start Mentorship - R{price}',
       links: [
         {
-          text: 'Back to Free Signals',
+          text: '← Back to Free Signals',
           href: '/free-signals',
         },
         {
-          text: 'View VIP Signals',
+          text: 'View VIP Signals →',
           href: '/vip-signals',
         },
       ],
     },
 
-    // VIP Signals
+    // VIP Signals with premium design
     {
       extends: 'paywall',
       path: '/vip-signals',
-      title: 'VIP Signals',
-      description: 'Premium signals with higher accuracy and frequency',
+      media: {
+        type: 'emoji',
+        src: '💎',
+        size: 70,
+      },
+      title: '💎 VIP Signals',
+      description: 'Join the <b>elite traders</b> with our premium signal service',
+      shape: 'rounded',
       list: [
-        'Premium daily signals',
-        'Higher win rate (85%+)',
-        'Multiple timeframes',
-        'Priority support',
-        'Exclusive market analysis',
+        {
+          media: {
+            type: 'emoji',
+            src: '🎯',
+            size: 20,
+          },
+          text: '<b>Premium daily signals</b> with detailed analysis',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '📈',
+            size: 20,
+          },
+          text: '<b>85%+ win rate</b> - proven track record',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '⏰',
+            size: 20,
+          },
+          text: '<b>Multiple timeframes</b> - scalping to swing',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '🏆',
+            size: 20,
+          },
+          text: '<b>Priority support</b> & direct trader access',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '📊',
+            size: 20,
+          },
+          text: '<b>Exclusive market analysis</b> & insights',
+        },
       ],
       products: [
         {
           id: 'vip_monthly',
-          title: 'VIP Monthly',
+          title: '💎 VIP Monthly',
           description: 'R1,500/month',
           discount: '',
           price: 1500,
         },
         {
           id: 'vip_yearly',
-          title: 'VIP Yearly',
+          title: '👑 VIP Yearly',
           description: 'R15,000 (Save R3,000)',
-          discount: 'Save 17%',
+          discount: '🔥 Save 17%',
           price: 15000,
         },
       ],
-      mainButtonText: 'Get VIP Access - R{price}',
+      mainButtonText: '💎 Get VIP Access - R{price}',
       links: [
         {
-          text: 'Back to Free Signals',
+          text: '← Back to Free Signals',
           href: '/free-signals',
         },
         {
-          text: 'View Mentorship',
+          text: 'View Mentorship →',
           href: '/mentorship',
         },
       ],
