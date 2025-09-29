@@ -89,27 +89,31 @@ export default defineConfig({
 
         // Trading experience question with modern styling
         {
+          extends: 'form',
           media: {
             type: 'emoji',
-            src: '🤔',
+            src: '📊',
             size: 70,
           },
-          title: 'Trading Experience',
-          description: 'Do you have any forex trading experience?',
+          title: 'Do you currently trade?',
+          description: 'Help us understand your current trading activity',
           textAlign: 'center',
           shape: 'rounded',
-          list: [
-            '💡 This helps us recommend the right service for you',
-            '📚 No experience? No problem - we\'ll guide you!',
-            '🎯 Experienced? We have advanced options too',
+          form: [
+            {
+              id: 'currently_trading',
+              placeholder: 'Select your trading status',
+              type: 'select',
+              options: [
+                'Yes - I currently trade forex',
+                'No - I don\'t currently trade'
+              ],
+            },
           ],
-          button: {
-            content: '✅ Yes, I have experience',
-            to: '/experienced',
-          },
+          button: 'Continue ➡️',
         },
 
-        // No experience path with better design
+        // No current trading - redirect to mentorship
         {
           media: {
             type: 'emoji',
@@ -117,7 +121,7 @@ export default defineConfig({
             size: 70,
           },
           title: 'Perfect! Let\'s Start Your Journey',
-          description: 'We\'ll help you become a successful trader from scratch',
+          description: 'We\'ll help you become a successful trader with our complete program',
           textAlign: 'center',
           shape: 'rounded',
           list: [
@@ -135,10 +139,10 @@ export default defineConfig({
       ],
     },
 
-    // Experienced traders - service selection with modern design
+    // Current traders - service selection with modern design
     {
       extends: 'slide',
-      path: '/experienced',
+      path: '/current-trader',
       media: {
         type: 'emoji',
         src: '🎯',
@@ -155,7 +159,7 @@ export default defineConfig({
             src: '📊',
             size: 24,
           },
-          text: '<b>Free Signals</b> - Daily forex signals with basic analysis',
+          text: '<b>1. Free Signals Only</b> - Daily forex signals with basic analysis',
         },
         {
           media: {
@@ -163,7 +167,7 @@ export default defineConfig({
             src: '🎓',
             size: 24,
           },
-          text: '<b>Mentorship & Training</b> - Complete education + free signals',
+          text: '<b>2. Mentorship & Training</b> - Complete education + free signals',
         },
         {
           media: {
@@ -171,12 +175,102 @@ export default defineConfig({
             src: '💎',
             size: 24,
           },
-          text: '<b>VIP Signals</b> - Premium signals with 85%+ accuracy',
+          text: '<b>3. VIP Signals</b> - Premium signals with 85%+ accuracy',
         },
       ],
       button: {
-        content: '📊 Start with Free Signals',
+        content: '📊 1. Free Signals Only',
         to: '/free-signals',
+      },
+    },
+
+    // Service selection for option 2 - Mentorship
+    {
+      extends: 'slide',
+      path: '/option-2',
+      media: {
+        type: 'emoji',
+        src: '🎓',
+        size: 70,
+      },
+      title: '🎓 Mentorship & Training',
+      description: 'Complete education program with free signals included',
+      textAlign: 'center',
+      shape: 'rounded',
+      list: [
+        {
+          media: {
+            type: 'emoji',
+            src: '👨🏫',
+            size: 20,
+          },
+          text: '<b>Personal mentorship</b> with professional traders',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '📚',
+            size: 20,
+          },
+          text: '<b>Complete trading course</b> from basics to advanced',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '📊',
+            size: 20,
+          },
+          text: '<b>Free signals included</b> in your package',
+        },
+      ],
+      button: {
+        content: '🚀 Get Mentorship Program',
+        to: '/mentorship',
+      },
+    },
+
+    // Service selection for option 3 - VIP Signals
+    {
+      extends: 'slide',
+      path: '/option-3',
+      media: {
+        type: 'emoji',
+        src: '💎',
+        size: 70,
+      },
+      title: '💎 VIP Signals',
+      description: 'Premium signals with 85%+ accuracy for serious traders',
+      textAlign: 'center',
+      shape: 'rounded',
+      list: [
+        {
+          media: {
+            type: 'emoji',
+            src: '🎯',
+            size: 20,
+          },
+          text: '<b>Premium signals</b> with detailed analysis',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '📈',
+            size: 20,
+          },
+          text: '<b>85%+ win rate</b> proven track record',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '👑',
+            size: 20,
+          },
+          text: '<b>Priority support</b> and exclusive access',
+        },
+      ],
+      button: {
+        content: '💎 Get VIP Access',
+        to: '/vip-signals',
       },
     },
 
@@ -190,7 +284,7 @@ export default defineConfig({
         size: 70,
       },
       title: '🎉 Free Signals Setup',
-      description: 'Get started with our free daily trading signals',
+      description: 'Please sign up with HFM broker with partner ID to get free signals',
       textAlign: 'center',
       shape: 'rounded',
       list: [
@@ -216,7 +310,7 @@ export default defineConfig({
             src: '💰',
             size: 20,
           },
-          text: 'Minimum deposit: <b>R1,000.00</b>',
+          text: 'Account must be funded with minimum deposit of <b>R1,000.00</b>',
         },
         {
           media: {
@@ -224,11 +318,11 @@ export default defineConfig({
             src: '✅',
             size: 20,
           },
-          text: 'Account must be <b>funded</b> to receive signals',
+          text: 'Once funded, you\'ll be added to free signals group',
         },
       ],
       button: {
-        content: '❓ Need Help Setting Up?',
+        content: '❓ Do you need help to sign up?',
         to: '/help',
       },
     },
@@ -242,8 +336,8 @@ export default defineConfig({
         src: '📋',
         size: 70,
       },
-      title: '📖 HFM Broker Setup Guide',
-      description: 'Follow these simple steps to set up your trading account',
+      title: '📖 HFM Broker Setup Instructions',
+      description: 'Follow these simple steps to sign up with partner ID',
       textAlign: 'center',
       shape: 'rounded',
       list: [
@@ -297,9 +391,59 @@ export default defineConfig({
         },
       ],
       button: {
-        content: '✅ My Account is Ready',
-        to: '/account-verified',
+        content: '❌ No, I can do it myself',
+        to: '/no-help',
       },
+    },
+
+    // No help needed - direct to account verification
+    {
+      extends: 'slide',
+      path: '/no-help',
+      media: {
+        type: 'emoji',
+        src: '👍',
+        size: 70,
+      },
+      title: '✅ Perfect!',
+      description: 'Once evidence of trading account setup is provided, you will be added to the free signals group',
+      textAlign: 'center',
+      shape: 'rounded',
+      list: [
+        {
+          media: {
+            type: 'emoji',
+            src: '📸',
+            size: 20,
+          },
+          text: 'Send <b>screenshot</b> of your funded HFM account',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '✅',
+            size: 20,
+          },
+          text: 'Must show <b>Partner ID</b> and minimum R1,000 deposit',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '⏰',
+            size: 20,
+          },
+          text: 'Verification takes <b>24-48 hours</b>',
+        },
+        {
+          media: {
+            type: 'emoji',
+            src: '📱',
+            size: 20,
+          },
+          text: 'You\'ll be added to our <b>free signals group</b>',
+        },
+      ],
+      button: '📤 Submit Account Proof',
     },
 
     // Account verification complete with celebration
@@ -425,8 +569,8 @@ export default defineConfig({
       mainButtonText: '🚀 Start Mentorship - R{price}',
       links: [
         {
-          text: '← Back to Free Signals',
-          href: '/free-signals',
+          text: '← Back to Services',
+          href: '/current-trader',
         },
         {
           text: 'View VIP Signals →',
@@ -508,8 +652,8 @@ export default defineConfig({
       mainButtonText: '💎 Get VIP Access - R{price}',
       links: [
         {
-          text: '← Back to Free Signals',
-          href: '/free-signals',
+          text: '← Back to Services',
+          href: '/current-trader',
         },
         {
           text: 'View Mentorship →',
