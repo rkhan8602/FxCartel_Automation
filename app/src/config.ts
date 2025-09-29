@@ -89,7 +89,6 @@ export default defineConfig({
 
         // Trading experience question with modern styling
         {
-          extends: 'form',
           media: {
             type: 'emoji',
             src: '📊',
@@ -99,43 +98,40 @@ export default defineConfig({
           description: 'Help us understand your current trading activity',
           textAlign: 'center',
           shape: 'rounded',
-          form: [
-            {
-              id: 'currently_trading',
-              placeholder: 'Select your trading status',
-              type: 'select',
-              options: [
-                'Yes - I currently trade forex',
-                'No - I don\'t currently trade'
-              ],
-            },
+          list: [
+            '💡 This helps us recommend the right service for you',
+            '📈 Active traders get different options',
+            '🎯 New traders get guided support',
           ],
-          button: 'Continue ➡️',
+          button: {
+            content: '✅ Yes, I currently trade',
+            to: '/current-trader',
+          },
         },
 
-        // No current trading - redirect to mentorship
+        // Add second button for "No" option
         {
           media: {
             type: 'emoji',
-            src: '🌟',
+            src: '📊',
             size: 70,
           },
-          title: 'Perfect! Let\'s Start Your Journey',
-          description: 'We\'ll help you become a successful trader with our complete program',
+          title: 'Do you currently trade?',
+          description: 'Help us understand your current trading activity',
           textAlign: 'center',
           shape: 'rounded',
           list: [
-            '📖 Complete beginner-friendly training',
-            '👨🏫 Personal mentorship & guidance',
-            '📊 Free trading signals included',
-            '💰 Learn proper risk management',
-            '🎯 Build a profitable trading strategy',
+            '💡 This helps us recommend the right service for you',
+            '📈 Active traders get different options', 
+            '🎯 New traders get guided support',
           ],
           button: {
-            content: '🚀 Start Learning Now',
+            content: '❌ No, I don\'t currently trade',
             to: '/mentorship',
           },
         },
+
+
       ],
     },
 
@@ -181,6 +177,32 @@ export default defineConfig({
       button: {
         content: '📊 1. Free Signals Only',
         to: '/free-signals',
+      },
+    },
+
+    // Add "No" button option for current trading question
+    {
+      extends: 'slide', 
+      path: '/no-trading',
+      media: {
+        type: 'emoji',
+        src: '🌟',
+        size: 70,
+      },
+      title: 'Perfect! Let\'s Start Your Journey',
+      description: 'We\'ll help you become a successful trader with our complete program',
+      textAlign: 'center',
+      shape: 'rounded',
+      list: [
+        '📖 Complete beginner-friendly training',
+        '👨🏫 Personal mentorship & guidance', 
+        '📊 Free trading signals included',
+        '💰 Learn proper risk management',
+        '🎯 Build a profitable trading strategy',
+      ],
+      button: {
+        content: '🚀 Start Learning Now',
+        to: '/mentorship',
       },
     },
 
