@@ -4,7 +4,6 @@ export default defineConfig({
   pages: [
     {
       slides: [
-        // Welcome slide with modern design
         {
           media: {
             type: 'emoji',
@@ -17,8 +16,6 @@ export default defineConfig({
           shape: 'rounded',
           button: 'Get Started 🎯',
         },
-
-        // User information form with dropdown
         {
           extends: 'form',
           media: {
@@ -86,8 +83,6 @@ export default defineConfig({
           ],
           button: 'Continue ➡️',
         },
-
-        // Trading experience question with modern styling
         {
           media: {
             type: 'emoji',
@@ -108,34 +103,9 @@ export default defineConfig({
             to: '/current-trader',
           },
         },
-
-        // Add second button for "No" option
-        {
-          media: {
-            type: 'emoji',
-            src: '📊',
-            size: 70,
-          },
-          title: 'Do you currently trade?',
-          description: 'Help us understand your current trading activity',
-          textAlign: 'center',
-          shape: 'rounded',
-          list: [
-            '💡 This helps us recommend the right service for you',
-            '📈 Active traders get different options', 
-            '🎯 New traders get guided support',
-          ],
-          button: {
-            content: '❌ No, I don\'t currently trade',
-            to: '/mentorship',
-          },
-        },
-
-
       ],
     },
 
-    // Current traders - service selection with modern design
     {
       extends: 'slide',
       path: '/current-trader',
@@ -180,123 +150,6 @@ export default defineConfig({
       },
     },
 
-    // Add "No" button option for current trading question
-    {
-      extends: 'slide', 
-      path: '/no-trading',
-      media: {
-        type: 'emoji',
-        src: '🌟',
-        size: 70,
-      },
-      title: 'Perfect! Let\'s Start Your Journey',
-      description: 'We\'ll help you become a successful trader with our complete program',
-      textAlign: 'center',
-      shape: 'rounded',
-      list: [
-        '📖 Complete beginner-friendly training',
-        '👨🏫 Personal mentorship & guidance', 
-        '📊 Free trading signals included',
-        '💰 Learn proper risk management',
-        '🎯 Build a profitable trading strategy',
-      ],
-      button: {
-        content: '🚀 Start Learning Now',
-        to: '/mentorship',
-      },
-    },
-
-    // Service selection for option 2 - Mentorship
-    {
-      extends: 'slide',
-      path: '/option-2',
-      media: {
-        type: 'emoji',
-        src: '🎓',
-        size: 70,
-      },
-      title: '🎓 Mentorship & Training',
-      description: 'Complete education program with free signals included',
-      textAlign: 'center',
-      shape: 'rounded',
-      list: [
-        {
-          media: {
-            type: 'emoji',
-            src: '👨🏫',
-            size: 20,
-          },
-          text: '<b>Personal mentorship</b> with professional traders',
-        },
-        {
-          media: {
-            type: 'emoji',
-            src: '📚',
-            size: 20,
-          },
-          text: '<b>Complete trading course</b> from basics to advanced',
-        },
-        {
-          media: {
-            type: 'emoji',
-            src: '📊',
-            size: 20,
-          },
-          text: '<b>Free signals included</b> in your package',
-        },
-      ],
-      button: {
-        content: '🚀 Get Mentorship Program',
-        to: '/mentorship',
-      },
-    },
-
-    // Service selection for option 3 - VIP Signals
-    {
-      extends: 'slide',
-      path: '/option-3',
-      media: {
-        type: 'emoji',
-        src: '💎',
-        size: 70,
-      },
-      title: '💎 VIP Signals',
-      description: 'Premium signals with 85%+ accuracy for serious traders',
-      textAlign: 'center',
-      shape: 'rounded',
-      list: [
-        {
-          media: {
-            type: 'emoji',
-            src: '🎯',
-            size: 20,
-          },
-          text: '<b>Premium signals</b> with detailed analysis',
-        },
-        {
-          media: {
-            type: 'emoji',
-            src: '📈',
-            size: 20,
-          },
-          text: '<b>85%+ win rate</b> proven track record',
-        },
-        {
-          media: {
-            type: 'emoji',
-            src: '👑',
-            size: 20,
-          },
-          text: '<b>Priority support</b> and exclusive access',
-        },
-      ],
-      button: {
-        content: '💎 Get VIP Access',
-        to: '/vip-signals',
-      },
-    },
-
-    // Free Signals Path with modern styling
     {
       extends: 'slide',
       path: '/free-signals',
@@ -349,7 +202,6 @@ export default defineConfig({
       },
     },
 
-    // Help with broker setup - modern design
     {
       extends: 'slide',
       path: '/help',
@@ -418,7 +270,6 @@ export default defineConfig({
       },
     },
 
-    // No help needed - direct to account verification
     {
       extends: 'slide',
       path: '/no-help',
@@ -468,57 +319,6 @@ export default defineConfig({
       button: '📤 Submit Account Proof',
     },
 
-    // Account verification complete with celebration
-    {
-      extends: 'slide',
-      path: '/account-verified',
-      media: {
-        type: 'emoji',
-        src: '🎉',
-        size: 80,
-      },
-      title: '🎊 Almost There!',
-      description: 'Just one final step to join our <b>exclusive free signals community</b>',
-      textAlign: 'center',
-      shape: 'rounded',
-      list: [
-        {
-          media: {
-            type: 'emoji',
-            src: '📸',
-            size: 20,
-          },
-          text: 'Send <b>screenshot</b> of your funded account',
-        },
-        {
-          media: {
-            type: 'emoji',
-            src: '⏰',
-            size: 20,
-          },
-          text: 'Wait for verification (<b>24-48 hours</b>)',
-        },
-        {
-          media: {
-            type: 'emoji',
-            src: '📱',
-            size: 20,
-          },
-          text: 'Get added to our <b>free signals channel</b>',
-        },
-        {
-          media: {
-            type: 'emoji',
-            src: '💎',
-            size: 20,
-          },
-          text: 'Start receiving <b>daily premium signals</b>',
-        },
-      ],
-      button: '📤 Submit Account Proof',
-    },
-
-    // Mentorship package with modern design
     {
       extends: 'paywall',
       path: '/mentorship',
@@ -601,7 +401,6 @@ export default defineConfig({
       ],
     },
 
-    // VIP Signals with premium design
     {
       extends: 'paywall',
       path: '/vip-signals',
