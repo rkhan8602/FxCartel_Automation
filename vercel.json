@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "turbo run build --scope @tok/app",
   "outputDirectory": "app/dist",
   "installCommand": "npm ci"
 }
