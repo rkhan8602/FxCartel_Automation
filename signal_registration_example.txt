@@ -1,0 +1,37 @@
+FX CARTEL SIGNAL REGISTRATION PROOF
+=====================================
+
+REQUIRED INFORMATION:
+- Full Name: John Smith
+- Telegram Username: @johnsmith123
+- Phone Number: +27 123 456 789
+- Email: johnsmith@email.com
+
+BROKER ACCOUNT DETAILS:
+- Broker: HFM
+- Account Number: 12345678
+- Partner ID Used: x
+- Account Type: Live Trading Account
+- Base Currency: USD/ZAR
+- Deposit Amount: R1,500.00
+- Deposit Date: 2024-01-15
+
+VERIFICATION ATTACHMENTS:
+- Screenshot of funded account dashboard
+- Screenshot showing Partner ID x in account details
+- Proof of deposit (bank statement/receipt)
+
+ADDITIONAL INFO:
+- How did you hear about us: Instagram
+- Trading Experience: Beginner
+- Preferred Signal Times: 08:00 - 17:00 SAST
+
+CONFIRMATION:
+I confirm that:
+✅ My account is funded with minimum R1,000
+✅ I used Partner ID: x during registration
+✅ All information provided is accurate
+✅ I agree to FX Cartel terms and conditions
+
+Date: 2024-01-15
+Signature: John Smith
