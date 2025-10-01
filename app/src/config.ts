@@ -1,6 +1,9 @@
 import { defineConfig } from '@tok/generation';
 
 export default defineConfig({
+  app: {
+    url: 'https://rkhan8602.github.io/FxCartel_Automation/',
+  },
   pages: [
     {
       slides: [
