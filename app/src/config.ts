@@ -13,7 +13,7 @@ export default defineConfig({
             src: '📈',
             size: 80,
           },
-          title: '🚀 Welcome to FX Cartel',
+          title: '🚀 Welcome to FX Cartel v2',
           description: 'Join our <b>exclusive trading community</b> and take your forex trading to the next level with professional signals and mentorship',
           textAlign: 'center',
           shape: 'rounded',
